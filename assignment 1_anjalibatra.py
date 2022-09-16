@@ -1,12 +1,12 @@
-m = int(input("Enter rows:"))
-n = int(input("Enter columns:"))
-arr = []
+import numpy as np
 
-for i in range(0,m):
-	col = []
-	for j in range(0,n):
-		col.append(i*j)
+rows = int(input("Enter rows:"))
+cols = int(input("Enter columns:"))
 
-	arr.append(col)
+arr = np.zeros((rows,cols))
+
+for i in range(rows):
+    for j in range(cols):
+        arr[i][j] = i*j
 
 print(arr)
